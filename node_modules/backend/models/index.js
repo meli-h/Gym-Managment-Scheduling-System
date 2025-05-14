@@ -1,4 +1,6 @@
 import { sequelize } from '../config/db.js';
+import { Sequelize, DataTypes } from 'sequelize';
+
 import AccountModel from './account.js';
 import PersonModel from './person.js';
 import AdminModel from './administrator.js';
@@ -8,13 +10,13 @@ import MembershipModel from './membership.js';
 import ReservationModel from './reservation.js';
 
 // MODELLER
-export const Account = AccountModel(sequelize, Sequelize.DataTypes);
-export const Person = PersonModel(sequelize, Sequelize.DataTypes);
-export const Administrator = AdminModel(sequelize, Sequelize.DataTypes);
-export const GymMember = MemberModel(sequelize, Sequelize.DataTypes);
-export const Trainer = TrainerModel(sequelize, Sequelize.DataTypes);
-export const Membership = MembershipModel(sequelize, Sequelize.DataTypes);
-export const Reservation = ReservationModel(sequelize, Sequelize.DataTypes);
+export const Account = AccountModel(sequelize, DataTypes);
+export const Person = PersonModel(sequelize, DataTypes);
+export const Administrator = AdminModel(sequelize, DataTypes);
+export const GymMember = MemberModel(sequelize, DataTypes);
+export const Trainer = TrainerModel(sequelize, DataTypes);
+export const Membership = MembershipModel(sequelize, DataTypes);
+export const Reservation = ReservationModel(sequelize, DataTypes);
 
 // İLİŞKİLER  ----------------------------------
 
